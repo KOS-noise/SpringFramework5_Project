@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student1" class="mylab.student.di.xml.Student">
+        <property name="id" value="S001"/>
+        <property name="name" value="김스프링"/>
+        <property name="score" value="95"/>
+    </bean>
+    
+    <bean id="student2" class="mylab.student.di.xml.Student">
+        <property name="id" value="S002"/>
+        <property name="name" value="이자바"/>
+        <property name="score" value="85"/>
+    </bean>
+    
+    <bean id="student3" class="mylab.student.di.xml.Student">
+        <constructor-arg name="id" value="S003"/>
+        <constructor-arg name="name" value="박코딩"/>
+        <constructor-arg name="score" value="75"/>
+    </bean>
+
+    <bean id="javaCourse" class="mylab.student.di.xml.Course">
+        <property name="courseId" value="C001"/>
+        <property name="courseName" value="자바 프로그래밍"/>
+        <property name="students">
+            <list>
+                <ref bean="student1"/>
+                <ref bean="student2"/>
+                <ref bean="student3"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="gradeService" class="mylab.student.di.xml.GradeService">
+        <property name="course" ref="javaCourse"/>
+    </bean>
+
+</beans>
