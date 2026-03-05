@@ -12,10 +12,7 @@
 * **XML 설정 파일:** [`mylab-student-di.xml`](src/main/resources/mylab-student-di.xml)
 * **테스트 코드:** [`StudentSpringTest.java`](src/test/java/mylab/student/di/xml/StudentSpringTest.java)
 
-### 학생 실습 다이어그램
-![학생 실습 다이어그램](image/student_diagram.png)
 
 ---
 
-토요일까지 ~ 3월 5일차복습
-과제 소스코드 복습
+토요일까지 ~ 3월 5일차까지 노션
